@@ -32,14 +32,14 @@
     <div class="container">
       <!-- Timeblocks go here -->
 
-      <div class = time-block><p>hello</p></div>
+      <div class = time-block></div>
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text">9 AM</span>
         </div>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" id="9aminput">
         <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
+          <button type="button" class="btn btn-success"id ="nineamsave">Save</button>
         </div>
       </div>
       <div class="input-group">
@@ -124,9 +124,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <Script>
-    
-  
-    const clock =document.getElementById('currentDay');
+
+      const clock =document.getElementById('currentDay');
     
     setInterval(() =>{
       const now = moment();
