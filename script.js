@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    const clock =document.getElementById('currentDay');
+    
 
     $(".saveBtn").on("click", function(){
         var value =$(this).siblings(".description").val();
@@ -37,5 +39,11 @@ for (var i = 9; i < 18; i++){
 
     $("#hour-" + i + " .description").val(localStorage.getItem("hour-" + i));
 }
+
+setInterval(() =>{
+    const now = moment();
+    const currentnow = now.format('MMMM Do YYYY, hh:mm:ss a');
+    clock.textContent = currentnow;
+  }, 1000);
 
 })
