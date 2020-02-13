@@ -31,108 +31,105 @@
     <div class="currenttime"></div>
     <div class="container">
       <!-- Timeblocks go here -->
-
-      <div class = time-block></div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">9 AM</span>
+      <div id="hour-9" class="row time-block">
+        <div class="col-md-1 hour">
+          9AM
         </div>
-        <input type="text" class="form-control" id="9aminput">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success"id ="nineamsave">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">10 AM</span>
+      <div id="hour-10" class="row time-block">
+        <div class="col-md-1 hour">
+          10AM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">11 AM</span>
+      <div id="hour-11" class="row time-block">
+        <div class="col-md-1 hour">
+          11AM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">12 PM</span>
+      <div id="hour-12" class="row time-block">
+        <div class="col-md-1 hour">
+          12PM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">1 PM</span>
+     <div id="hour-13" class="row time-block">
+        <div class="col-md-1 hour">
+          1PM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">2 PM</span>
+      <div id="hour-14" class="row time-block">
+        <div class="col-md-1 hour">
+          2PM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">3 PM</span>
+      <div id="hour-15" class="row time-block">
+       <div class="col-md-1 hour">
+          3PM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">4 PM</span>
+      <div id="hour-16" class="row time-block">
+        <div class="col-md-1 hour">
+          4PM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">5 PM</span>
+      <div id="hour-17" class="row time-block">
+        <div class="col-md-1 hour">
+          5PM
         </div>
-        <input type="text" class="form-control">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-success">Save</button>
-        </div>
+        <textarea class="col-md-10 description">
+        </textarea>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
       </div>
-      
-    </div>
-    
-
+  
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
+<script src = "script.js"></script>
     <Script>
-
-      const clock =document.getElementById('currentDay');
+      $(document).ready(function(){
+        const clock =document.getElementById('currentDay');
     
     setInterval(() =>{
       const now = moment();
       const currentnow = now.format('MMMM Do YYYY, hh:mm:ss a');
       clock.textContent = currentnow;
     }, 1000);
+
+    $(".btn").on("click",function(){
+      console.log("working");
+      var value = $(".form-control").val();
+      console.log(value);
+    })
+      })
+
+
       </script>
+
+<script src = "script.js"></script>
    
   </body>
 </html>
